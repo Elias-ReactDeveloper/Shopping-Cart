@@ -1,0 +1,30 @@
+.item-loja {
+    width: 250px;
+    background-color: #fff;
+}
+.item-loja img {
+    width: 250px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.item-loja .info {
+    display: flex;
+    justify-content: space-between;
+}
+.preco-item-loja {
+    color: #757779;
+}
+
+.add-carrinho-div {
+    display: flex;
+    justify-content: center;
+}
+.add-carrinho {
+    width: 200px;
+    height: 30px;
+    background-color: #0E6EF4;
+    color: #ffff;
+    border: 0;
+    border-radius: 5px;
+}

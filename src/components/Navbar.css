@@ -1,0 +1,16 @@
+.navbar-container {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.navbar-links {
+    width: 1000px;
+    display: flex;
+    margin: auto;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin: 0 10px  ;
+}
