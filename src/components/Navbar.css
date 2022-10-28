@@ -1,7 +1,8 @@
 .navbar-container {
     display: flex;
-    padding: 10px;
+    padding: 10px 0;
     background-color: #fff;
+    box-shadow: 1px 1px 3px;
 }
 
 .navbar-links {
@@ -9,8 +10,14 @@
     display: flex;
     margin: auto;
     list-style: none;
+    padding-left: 0;
 }
 
 .navbar-links li {
-    margin: 0 10px  ;
+    margin-right: 10px;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #000;
 }

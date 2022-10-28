@@ -1,6 +1,8 @@
 .item-loja {
     width: 250px;
     background-color: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
 }
 .item-loja img {
     width: 250px;
@@ -11,6 +13,7 @@
 .item-loja .info {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 .preco-item-loja {
     color: #757779;
@@ -21,7 +24,7 @@
     justify-content: center;
 }
 .add-carrinho {
-    width: 200px;
+    width: 100%;
     height: 30px;
     background-color: #0E6EF4;
     color: #ffff;

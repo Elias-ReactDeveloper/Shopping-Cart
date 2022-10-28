@@ -1,6 +1,11 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 
-import Item from './components/Item'
+import Home from './pages/Home'
+import Loja from './pages/Loja'
+import Sobre from './pages/Sobre'
+import NotFound from './pages/NotFound'
+
 import Navbar from './components/Navbar'
 
 function App(): JSX.Element {
@@ -8,8 +13,15 @@ function App(): JSX.Element {
 
   return (
     <div className="App">
-      <Navbar />
-      <Item />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/loja' element={<Loja />} />
+            <Route path='/sobre' element={<Sobre />} />
+            <Route path='*' element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

@@ -1,9 +1,7 @@
 import React from "react";
 
-const Sobre = () => {
-    return ( <div>
-        Sobre
-    </div> );
+const Sobre = (): JSX.Element  => {
+    return ( <div></div> );
 }
  
 export default Sobre;

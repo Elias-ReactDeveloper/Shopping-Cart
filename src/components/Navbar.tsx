@@ -1,31 +1,20 @@
 import React from "react";
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
-import Home from '../pages/Home'
-import Loja from '../pages/Loja'
-import Sobre from '../pages/Sobre'
-import NotFound from '../pages/NotFound'
 
 import './Navbar.css'
 
-const Navbar = () : JSX.Element => {
-    return (<div>
+const Navbar = () : JSX.Element => {    
+
+    return (
         <div className="navbar-container">
             <ul className="navbar-links">
-                <li>Home</li>
-                <li>Loja</li>
-                <li>Sobre</li>
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/loja'>Loja</Link></li>
+                <li><Link to='/sobre'>Sobre</Link></li>
             </ul>
         </div>
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/loja' element={<Loja />} />
-                <Route path='/sobre' element={<Sobre />} />
-                <Route path='*' element={<NotFound />} />
-            </Routes>
-        </BrowserRouter>
-    </div>);
+    );
 }
  
 export default Navbar;
