@@ -1,4 +1,10 @@
-.itens {
-    width: 1000px;
+.itens-container {
+    width: 80%;
     margin: auto;
+}
+
+.itens {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
 }
