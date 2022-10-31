@@ -1,7 +1,8 @@
 .item-loja {
-    width: 300px;
+    width: 250px;
     background-color: #fff;
     border: 1px solid #eee;
+    margin: 10px;
 }
 
 .item-loja img {
@@ -20,16 +21,3 @@
     color: #757779;
 }
 
-.add-carrinho-div {
-    display: flex;
-    justify-content: center;
-    padding: 20px 20px;
-}
-.add-carrinho {
-    width: 100%;
-    height: 30px;
-    background-color: #0E6EF4;
-    color: #ffff;
-    border: 0;
-    border-radius: 5px;
-}

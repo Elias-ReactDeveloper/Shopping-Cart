@@ -1,10 +1,25 @@
 .itens-container {
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
 .itens {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 20px;
+    row-gap: 10px;
+}
+
+@media(max-width: 915px) {
+    .itens {
+        grid-template-columns: 1fr 1fr;
+    }
+    .itens div {
+        justify-self: center;
+    }
+}
+
+@media(max-width: 600px) {
+    .itens {
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import Item from '../components/Item'
+import Item from '../components/Item/Item'
 
 import type { RootState } from "../redux/store";
 

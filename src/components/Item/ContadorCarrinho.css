@@ -1,0 +1,39 @@
+.contador-carrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.mudarCarrinho {
+    background-color: #106EF2;
+    color: #fff;
+    width: 30px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.quantidade-carrinho {
+    font-size: 20px;
+}
+
+.botao-remover {
+    background-color: #D93548;
+    color: #fff;
+    width: 80px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0; 
+}
+
+.add-carrinho {
+    width: 100%;
+    height: 30px;
+    background-color: #0E6EF4;
+    color: #ffff;
+    border: 0;
+    border-radius: 5px;
+}
