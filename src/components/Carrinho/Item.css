@@ -1,0 +1,35 @@
+.carrinho-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrinho-item .lado-esquerdo {
+    display: flex;
+    align-items: center;
+}
+.carrinho-item .lado-esquerdo img {
+    width: 100px;
+}
+.carrinho-item .lado-esquerdo p {
+    margin: 0;
+}
+
+.carrinho-item .lado-direito {
+    display: flex;
+    align-items: center;
+}
+.carrinho-item .lado-direito .excluir-item {
+    width: 20px;
+    height: 20px;
+    margin-left: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 10px;
+    
+    border: 1px solid #D8394C;
+    color: #D8394C;
+    padding: 5px;
+}

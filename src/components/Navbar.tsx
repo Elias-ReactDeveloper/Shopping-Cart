@@ -12,8 +12,8 @@ const Navbar = () : JSX.Element => {
 
     const itens = useSelector((state: RootState) => state.itens.itens)
     
-    const mostraIconeCarrinho = () : Boolean => {
-        return itens.filter((item) => item.noCarrinho > 0).length > 0
+    const qtdItensCarrinho = () : Number => {
+        return itens.filter((item) => item.noCarrinho > 0).length
     }
 
     return (
@@ -23,12 +23,15 @@ const Navbar = () : JSX.Element => {
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/loja'>Loja</Link></li>
                     <li><Link to='/sobre'>Sobre</Link></li>
-                </ul>
-                <img 
-                    src={carrinho} alt="" 
-                    className="abrir-carrinho-icone" 
-                    style={ { display: mostraIconeCarrinho() ? "initial" : "none" } } 
-                />
+                </ul>   
+                <div className="carrinho-link">
+                    <img
+                        src={carrinho} alt=""
+                        className="carrinho-icone"
+                        style={ { display: qtdItensCarrinho() > 0 ? "initial" : "none" } }
+                    />
+                    <span className="carrinho-qtd">{ `${qtdItensCarrinho()}` }</span>
+                </div>
             </div>
         </div>
     );
