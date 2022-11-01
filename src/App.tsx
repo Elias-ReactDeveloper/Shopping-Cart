@@ -1,15 +1,14 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Home from './pages/Home'
-import Loja from './pages/Loja'
-import Sobre from './pages/Sobre'
-import NotFound from './pages/NotFound'
+import Home from './paginas/Home'
+import Loja from './paginas/Loja'
+import Sobre from './paginas/Sobre'
+import NotFound from './paginas/NotFound'
 
 import Navbar from './components/Navbar'
 
 function App(): JSX.Element {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
