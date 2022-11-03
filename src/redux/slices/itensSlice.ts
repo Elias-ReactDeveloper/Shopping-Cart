@@ -1,17 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
-export interface ItensState {
-    itens: {
-        nome: string
-        preco: number
-        imagemUrl: string
-        noCarrinho: number
-        _id: number
-    }[]
+export interface IItem {
+    nome: string
+    preco: number
+    imagemUrl: string
+    noCarrinho: number
+    _id: number
 }
 
-const initialState: ItensState = {
+interface IItensState {
+    itens: IItem[]
+}
+
+const initialState: IItensState = {
     itens: [{
         nome: "Banana",
         preco: 2.00,

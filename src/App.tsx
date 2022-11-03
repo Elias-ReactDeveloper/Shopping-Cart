@@ -18,12 +18,16 @@ function App(): JSX.Element {
       <BrowserRouter>
         <Navbar carrinhoAberto={carrinhoAberto} setCarrinhoAberto={setCarrinhoAberto} />
         { carrinhoAberto && <Carrinho  carrinhoAberto={carrinhoAberto} setCarrinhoAberto={setCarrinhoAberto} /> }
-        <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/loja' element={<Loja />} />
-            <Route path='/sobre' element={<Sobre />} />
-            <Route path='*' element={<NotFound />} />
-        </Routes>
+        <div
+          style={ { marginTop: "80px" /* por causa da navbar fixed */ }}
+        >
+          <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/loja' element={<Loja />} />
+              <Route path='/sobre' element={<Sobre />} />
+              <Route path='*' element={<NotFound />} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </div>
   )

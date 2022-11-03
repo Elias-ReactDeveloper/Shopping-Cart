@@ -2,25 +2,15 @@ import React, { FC } from 'react'
 
 import ContadorCarrinho from './ContadorCarrinho'
 
+import { IItem } from '../../redux/slices/itensSlice'
+
 import './Item.css'
 
 interface ItemProps {
-    item: {
-        nome: string
-        preco: number
-        imagemUrl: string
-        noCarrinho: number
-        _id: number
-    }
+    item: IItem
 }
 
-const Item: FC<ItemProps>  = ( props ): JSX.Element => {
-    
-    const addCarrinho = () : void  => {
-        
-    } 
-
-    const { item } = props
+const Item: FC<ItemProps>  = ({ item }): JSX.Element => {
 
     return ( 
         <div className='item-loja'>

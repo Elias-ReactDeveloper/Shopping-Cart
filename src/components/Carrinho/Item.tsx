@@ -1,21 +1,16 @@
 import React, { FC } from "react";
 import { useDispatch } from "react-redux";
 
+import { IItem } from '../../redux/slices/itensSlice'
+
 import { removerItemCarrinho } from "../../redux/slices/itensSlice";
 
 import './Item.css'
 
 
 interface ItemProps {
-    item: {
-        nome: string
-        preco: number
-        imagemUrl: string
-        noCarrinho: number
-        _id: number
-    }
+    item: IItem
 }
-
 
 const Item: FC<ItemProps> = ({ item }) => {
 

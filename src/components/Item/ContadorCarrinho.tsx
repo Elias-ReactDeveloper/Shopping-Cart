@@ -10,7 +10,7 @@ interface ContadorCarrinhoProps {
     _id: number
 }
 
-const ContadorCarrinho: FC<ContadorCarrinhoProps> = ( { noCarrinho, _id: id }) => {
+const ContadorCarrinho: FC<ContadorCarrinhoProps> = ( { noCarrinho, _id  }) => {
 
     const dispatch = useDispatch()
 
@@ -19,7 +19,7 @@ const ContadorCarrinho: FC<ContadorCarrinhoProps> = ( { noCarrinho, _id: id }) =
             noCarrinho === 0 ?
                 <div className="contador-carrinho">
                     <button 
-                        onClick={() => dispatch(incrementarCarrinho(id))} 
+                        onClick={() => dispatch(incrementarCarrinho(_id))} 
                         className="add-carrinho">
                         + add ao carrinho
                     </button> 
@@ -27,11 +27,11 @@ const ContadorCarrinho: FC<ContadorCarrinhoProps> = ( { noCarrinho, _id: id }) =
             :   
                 <div className="contador-carrinho">
                     <div>
-                        <button onClick={() => dispatch(decrementarCarrinho(id))} className="mudarCarrinho">-</button>
+                        <button onClick={() => dispatch(decrementarCarrinho(_id))} className="mudarCarrinho">-</button>
                         <span className="quantidade-carrinho">{ noCarrinho }</span> no carrinho
-                        <button onClick={() => dispatch(incrementarCarrinho(id))} className="mudarCarrinho">+</button>
+                        <button onClick={() => dispatch(incrementarCarrinho(_id))} className="mudarCarrinho">+</button>
                     </div>
-                    <button onClick={() => dispatch(removerItemCarrinho(id))} className="botao-remover">Remover</button>
+                    <button onClick={() => dispatch(removerItemCarrinho(_id))} className="botao-remover">Remover</button>
                 </div>
     }
     </div>

@@ -29,11 +29,13 @@ const Navbar: FC<IProps> = ({ carrinhoAberto, setCarrinhoAberto }) : JSX.Element
                     <li><Link to='/loja'>Loja</Link></li>
                     <li><Link to='/sobre'>Sobre</Link></li>
                 </ul>   
-                <div className="carrinho-link">
+                <div 
+                    className="carrinho-link"
+                    style={ { display: qtdItensCarrinho() > 0 ? "initial" : "none" } }
+                >
                     <img
                         src={carrinho} alt=""
                         className="carrinho-icone"
-                        style={ { display: qtdItensCarrinho() > 0 ? "initial" : "none" } }
                         onClick={() => setCarrinhoAberto(!carrinhoAberto)}
                     />
                     <span className="carrinho-qtd">{ `${qtdItensCarrinho()}` }</span>
