@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SetStateAction, Dispatch, FC } from "react";
 import { Link } from 'react-router-dom'
 import { useSelector } from "react-redux";
 
@@ -8,7 +8,12 @@ import carrinho from '../assets/shoppingCart.png'
 
 import './Navbar.css'
 
-const Navbar = () : JSX.Element => {    
+interface IProps {
+    carrinhoAberto: Boolean
+    setCarrinhoAberto: Dispatch<SetStateAction<Boolean>>
+}
+
+const Navbar: FC<IProps> = ({ carrinhoAberto, setCarrinhoAberto }) : JSX.Element => {    
 
     const itens = useSelector((state: RootState) => state.itens.itens)
     
@@ -29,6 +34,7 @@ const Navbar = () : JSX.Element => {
                         src={carrinho} alt=""
                         className="carrinho-icone"
                         style={ { display: qtdItensCarrinho() > 0 ? "initial" : "none" } }
+                        onClick={() => setCarrinhoAberto(!carrinhoAberto)}
                     />
                     <span className="carrinho-qtd">{ `${qtdItensCarrinho()}` }</span>
                 </div>

@@ -11,11 +11,13 @@ import Carrinho from './components/Carrinho/Carrinho'
 
 function App(): JSX.Element {
 
+  const [carrinhoAberto, setCarrinhoAberto] = useState<Boolean>(false)
+
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
-        <Carrinho />
+        <Navbar carrinhoAberto={carrinhoAberto} setCarrinhoAberto={setCarrinhoAberto} />
+        { carrinhoAberto && <Carrinho  carrinhoAberto={carrinhoAberto} setCarrinhoAberto={setCarrinhoAberto} /> }
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/loja' element={<Loja />} />

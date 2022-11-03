@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 import { RootState } from "../../redux/store";
@@ -7,14 +7,33 @@ import Item from './Item'
 
 import './Carrinho.css'
 
-const Carrinho = () => {
+interface IProps {
+    carrinhoAberto: Boolean
+    setCarrinhoAberto: Dispatch<SetStateAction<Boolean>>
+}
+
+const Carrinho: FC<IProps> = ({ carrinhoAberto, setCarrinhoAberto }) => {
+    
+    const [total, setTotal] = useState<Number>()
 
     const itens = useSelector((state: RootState) => state.itens.itens)
+
+    useEffect(() => {
+        const total : Number = itens.reduce((valor, item) => {
+            if(item.noCarrinho > 0) return valor + (item.noCarrinho * item.preco)
+            return valor
+        }, 0)
+        setTotal(total)
+    }, [ itens ])
+
 
     return ( <div className="carrinho-container">
         <div className="carrinho-cabecalho">
             <h3>Carrinho</h3>
-            <span>X</span>
+            <span 
+                onClick={() => setCarrinhoAberto(!carrinhoAberto)}
+                style={ { cursor: 'pointer' }}
+            >X</span>
         </div>
 
         <div>
@@ -24,6 +43,8 @@ const Carrinho = () => {
                 })
             }
         </div>
+
+        <div className="total">Total: R${`${total}`}</div>
     </div> );
 }
  
