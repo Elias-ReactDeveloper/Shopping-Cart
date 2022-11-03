@@ -27,11 +27,11 @@ const Carrinho: FC<IProps> = ({ carrinhoAberto, setCarrinhoAberto }) => {
     }, [ itens ])
 
 
-    return ( <div className="carrinho-container">
+    return ( <div className="carrinho-container" style={ { right: carrinhoAberto ? "0" : "-300px" } }>
         <div className="carrinho-cabecalho">
             <h3>Carrinho</h3>
             <span 
-                onClick={() => setCarrinhoAberto(!carrinhoAberto)}
+                onClick={() => setCarrinhoAberto(false)}
                 style={ { cursor: 'pointer' }}
             >X</span>
         </div>

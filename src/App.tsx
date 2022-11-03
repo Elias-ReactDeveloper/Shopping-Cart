@@ -17,7 +17,7 @@ function App(): JSX.Element {
     <div className="App">
       <BrowserRouter>
         <Navbar carrinhoAberto={carrinhoAberto} setCarrinhoAberto={setCarrinhoAberto} />
-        { carrinhoAberto && <Carrinho  carrinhoAberto={carrinhoAberto} setCarrinhoAberto={setCarrinhoAberto} /> }
+        <Carrinho carrinhoAberto={carrinhoAberto} setCarrinhoAberto={setCarrinhoAberto} />
         <div
           style={ { marginTop: "80px" /* por causa da navbar fixed */ }}
         >

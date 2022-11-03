@@ -9,6 +9,8 @@
     z-index: 2;
 
     padding: 0 20px;
+    
+    transition: all 0.2s linear;
 }
 
 .carrinho-cabecalho {
