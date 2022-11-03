@@ -14,7 +14,7 @@ const Loja = (): JSX.Element => {
     return ( 
         <div>
             <div className="itens-container">
-                <h2>Store</h2>
+                <h2>Loja</h2>
                 <div className="itens">
                     {
                         itens.map((item) => <Item item={item} />)
