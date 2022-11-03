@@ -7,10 +7,10 @@ import './ContadorCarrinho.css'
 
 interface ContadorCarrinhoProps {
     noCarrinho: number
-    id: number
+    _id: number
 }
 
-const ContadorCarrinho: FC<ContadorCarrinhoProps> = ( { noCarrinho, id }) => {
+const ContadorCarrinho: FC<ContadorCarrinhoProps> = ( { noCarrinho, _id: id }) => {
 
     const dispatch = useDispatch()
 

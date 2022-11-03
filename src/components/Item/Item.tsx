@@ -29,7 +29,7 @@ const Item: FC<ItemProps>  = ( props ): JSX.Element => {
                 <h3 className='titulo-item-loja'>{item.nome}</h3>
                 <p className='preco-item-loja'>R${item.preco}</p>
             </div>
-            <ContadorCarrinho noCarrinho={item.noCarrinho} id={item._id} />
+            <ContadorCarrinho noCarrinho={item.noCarrinho} _id={item._id} />
         </div> );
 }
  

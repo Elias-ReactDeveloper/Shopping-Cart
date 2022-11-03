@@ -1,4 +1,7 @@
 import React, { FC } from "react";
+import { useDispatch } from "react-redux";
+
+import { removerItemCarrinho } from "../../redux/slices/itensSlice";
 
 import './Item.css'
 
@@ -16,6 +19,8 @@ interface ItemProps {
 
 const Item: FC<ItemProps> = ({ item }) => {
 
+    const dispatch = useDispatch()
+
     return (<div className="carrinho-item">
         <div className="lado-esquerdo">
             <img src={item.imagemUrl} alt="" />
@@ -26,7 +31,10 @@ const Item: FC<ItemProps> = ({ item }) => {
         </div>
         <div className="lado-direito">
             <div style={{ fontSize: "12px" }}>R$ {item.preco * item.noCarrinho}</div>
-            <div className="excluir-item">X</div>
+            <div 
+                className="excluir-item"
+                onClick={() => dispatch(removerItemCarrinho(item._id))}
+            >X</div>
         </div>
     </div>);
 }
