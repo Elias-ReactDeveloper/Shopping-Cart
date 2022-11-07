@@ -1,3 +1,16 @@
+
+.carrinho-tela-toda {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(123, 125, 125, 0.6);
+    /*opacity: 0.5;*/
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
 .carrinho-container {
     background-color: #fff;
     width: 300px;
@@ -6,8 +19,8 @@
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 2;
-
+    z-index: 3;
+    
     padding: 0 20px;
     
     transition: all 0.2s linear;

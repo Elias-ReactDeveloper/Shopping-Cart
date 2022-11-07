@@ -17,7 +17,7 @@ const Loja = (): JSX.Element => {
                 <h2>Loja</h2>
                 <div className="itens">
                     {
-                        itens.map((item) => <Item item={item} />)
+                        itens.map((item) => <Item item={item} key={item._id} />)
                     }
                 </div>
             </div>

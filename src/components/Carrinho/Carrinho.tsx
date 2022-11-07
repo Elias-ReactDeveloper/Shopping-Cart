@@ -27,25 +27,26 @@ const Carrinho: FC<IProps> = ({ carrinhoAberto, setCarrinhoAberto }) => {
     }, [ itens ])
 
 
-    return ( <div className="carrinho-container" style={ { right: carrinhoAberto ? "0" : "-300px" } }>
-        <div className="carrinho-cabecalho">
-            <h3>Carrinho</h3>
-            <span 
-                onClick={() => setCarrinhoAberto(false)}
-                style={ { cursor: 'pointer' }}
-            >X</span>
+    return ( 
+    <div className="carrinho-tela-toda" style={ { display: carrinhoAberto ? "initial" : "none" } }>
+        <div className="carrinho-container" style={ { right: carrinhoAberto ? "0" : "-300px" } }>
+            <div className="carrinho-cabecalho">
+                <h3>Carrinho</h3>
+                <span
+                    onClick={() => setCarrinhoAberto(false)}
+                    style={ { cursor: 'pointer' }}
+                >X</span>
+            </div>
+            <div>
+                {
+                    itens.map((item) => {
+                        if(item.noCarrinho > 0) return <div> <Item item={item} /> </div>
+                    })
+                }
+            </div>
+            <div className="total">Total: R${`${total}`}</div>
         </div>
-
-        <div>
-            {
-                itens.map((item) => {
-                    if(item.noCarrinho > 0) return <div> <Item item={item} /> </div>
-                })
-            }
-        </div>
-
-        <div className="total">Total: R${`${total}`}</div>
-    </div> );
+    </div>);
 }
  
 export default Carrinho;

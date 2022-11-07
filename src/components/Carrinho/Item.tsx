@@ -20,8 +20,15 @@ const Item: FC<ItemProps> = ({ item }) => {
         <div className="lado-esquerdo">
             <img src={item.imagemUrl} alt="" />
             <div>
-                <p style={{ fontSize: "12px" }}>{item.nome}</p>
-                <p style={{ fontSize: "10px", color: "#989898" }}>R$ {item.preco}</p>
+                <p>
+                    <span style={{ fontSize: "14px", marginRight: "4px"}}>{item.nome}</span>
+                    {
+                        item.noCarrinho > 1 ? 
+                        <span style={{ fontSize: "12px", color: "#989898" }}>x{item.noCarrinho}</span>
+                        : null
+                    }
+                </p>
+                <p style={{ fontSize: "12px", color: "#989898" }}>R$ {item.preco}</p>
             </div>
         </div>
         <div className="lado-direito">
