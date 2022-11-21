@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 import { RootState } from "../redux/store";
 
-import carrinho from '../assets/shoppingCart.png' 
+import imagemCarrinho from '../assets/open-cart.png' 
 
 import './Navbar.css'
 
@@ -34,7 +34,7 @@ const Navbar: FC<IProps> = ({ carrinhoAberto, setCarrinhoAberto }) : JSX.Element
                     style={ { display: qtdItensCarrinho() > 0 ? "initial" : "none" } }
                 >
                     <img
-                        src={carrinho} alt=""
+                        src={imagemCarrinho} alt=""
                         className="carrinho-icone"
                         onClick={() => setCarrinhoAberto(true)}
                     />
